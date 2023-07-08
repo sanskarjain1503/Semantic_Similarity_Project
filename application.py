@@ -10,7 +10,6 @@ app=application
 model=pickle.load(open('models/model.pkl','rb'))
 
 @app.route('/',methods=['GET','POST'])
-@cross_origin()
 def semantic_similarity1():
     if request.method=='POST':
         text1=request.form.get('text1')
