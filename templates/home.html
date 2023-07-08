@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <div class="login">
+            <h1>semantic similarity</h1>
+
+            <h4>A semantic similarity project aims to measure the degree of similarity or relatedness between words, phrases, sentences, or documents based on their meaning or semantic content. The goal is to develop computational models or algorithms that can accurately capture the semantic relationships and similarities between textual elements.</h4>
+
+            <form action="{{ url_for('semantic_similarity1')}}" method="post">
+                <input type="text" name="text1" placeholder="text1" required="required" /><br>
+                <input type="text" name="text2" placeholder="text2" required="required" /><br>
+
+                <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            </form>
+        <h3>First Sentence is : '{{text1}}'</h3>
+        <h3>Second sentence is: '{{text2}}'</h3>
+        <h2>
+            THE Semantic Similarity is {{result}}
+        </h2>
+    </body>
+</html>
