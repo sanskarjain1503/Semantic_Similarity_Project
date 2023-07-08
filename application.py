@@ -4,11 +4,13 @@ import numpy as np
 import pandas as pd
 from sentence_transformers import SentenceTransformer, util
 
-app = Flask(__name__)
+application = Flask(__name__)
+app=application
 
 model=pickle.load(open('models/model.pkl','rb'))
 
 @app.route('/',methods=['GET','POST'])
+@cross_origin()
 def semantic_similarity1():
     if request.method=='POST':
         text1=request.form.get('text1')
